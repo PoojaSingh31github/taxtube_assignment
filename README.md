@@ -23,7 +23,7 @@ A React-based user management dashboard that fetches user data from a public API
 
  Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/user-management-dashboard.git](https://github.com/PoojaSingh31github/taxtube_assignment)
+   git clone https://github.com/PoojaSingh31github/taxtube_assignment
    npm i
    npm run dev
 
