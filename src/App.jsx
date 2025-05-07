@@ -48,14 +48,14 @@ export default function App() {
 
   return (
 
-    <div className="p-6 bg-gray-50 border-b border-gray-200 shadow-sm">
+    <div className="p-6 bg-gray-50 border-b border-gray-200 ">
   <div className="flex justify-between items-center mb-10">
     <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
       User Management Dashboard
     </h1>
     <button
       onClick={() => setShowAddForm(true)}
-      className="bg-blue-600 hover:bg-blue-700 border-[1px] border-red-400 text-white font-medium px-5 py-2 rounded-md shadow transition duration-200"
+      className="bg-blue-600 hover:bg-blue-700 border-[1px] cursor-pointer border-red-400 text-white font-medium px-5 py-2 rounded-md shadow transition duration-200"
     >
        Add User
     </button>
@@ -71,13 +71,13 @@ export default function App() {
         <div className="mb-5">
         <button
           onClick={() => setSortBy("name")}
-          className="bg-blue-500 hover:bg-blue-700 border-[1px] border-red-400 text-white px-4 py-2 rounded-md mr-2"
+          className="bg-blue-500 cursor-pointer hover:bg-blue-700 border-[1px] border-red-400 text-white px-4 py-2 rounded-md mr-2"
         >
           Sort by Name
         </button>
         <button
           onClick={() => setSortBy("email")}
-          className="bg-blue-500 hover:bg-blue-700 border-[1px] border-red-400 text-white px-4 py-2 rounded-md"
+          className="bg-blue-500 cursor-pointer hover:bg-blue-700 border-[1px] border-red-400 text-white px-4 py-2 rounded-md"
         >
           Sort by Email
         </button>
@@ -85,23 +85,23 @@ export default function App() {
        <table className="w-full mt-4 text-sm text-left">
   <thead className="bg-gray-100 text-gray-600 uppercase tracking-wider">
     <tr>
-      <th className="py-3 px-4">Name</th>
-      <th className="py-3 px-4">Email</th>
-      <th className="py-3 px-4">Phone</th>
-      <th className="py-3 px-4">Actions</th>
+      <th className="py-3 px-4 w-[200px]">Name</th>
+      <th className="py-3 px-4 w-[200px]">Email</th>
+      <th className="py-3 px-4 w-[200px]">Phone</th>
+      <th className="py-3 px-4 w-[200px]">Actions</th>
     </tr>
   </thead>
   <tbody className="bg-white divide-y divide-gray-200">
     {paginatedUsers.map((user) => (
       <tr key={user.id} className="hover:bg-gray-50">
-        <td className="py-3 px-4 font-medium text-gray-900 flex items-center">
+        <td className="py-3 px-4 font-medium text-gray-900 flex items-center w-[200px]">
           <div className="w-8 h-8 rounded-full bg-purple-200 flex items-center justify-center text-sm font-bold text-white mr-3">
             {user.name.charAt(0)}
           </div>
           {user.name}
         </td>
-        <td className="py-3 px-4 text-gray-700">{user.email}</td>
-        <td className="py-3 px-4 text-gray-700">{user.phone}</td>
+        <td className="py-3 px-4 text-gray-700 w-[200px]">{user.email}</td>
+        <td className="py-3 px-4 text-gray-700 ">{user.phone}</td>
         <td className="py-3 px-4">
           <button
             onClick={() => setViewUser(user)}
@@ -121,13 +121,13 @@ export default function App() {
   </tbody>
 </table>
 
-<div className="my-4 flex justify-center">
+<div className="my-4 flex justify-center w-full">
   {Array.from({ length: Math.ceil(users.length / perPage) }, (_, i) => (
     <button
       key={i}
       onClick={() => setPage(i + 1)}
-      className={`mx-1 px-3 py-1 rounded-full text-sm font-medium ${
-        page === i + 1 ? "bg-blue-600 border-[1px] border-red-400 text-white" : "bg-gray-200 text-gray-800"
+      className={`mx-1 px-3 py-1 rounded-full text-sm cursor-pointer font-medium ${
+        page === i + 1 ? "bg-blue-600  border-[1px] border-red-400 text-white" : "bg-gray-200 text-gray-800"
       }`}
     >
       {i + 1}
@@ -139,7 +139,7 @@ export default function App() {
       )}
 {viewUser && (
   <div className="fixed top-0 right-0 bg-black/30 backdrop-blur-sm w-full h-full z-40">
-    <div className="md:w-1/3 sm:w-96 bg-white float-right p-6 shadow-2xl h-full rounded-l-lg flex flex-col items-center">
+    <div className="md:w-1/3 sm:w-96 bg-white float-right p-6 h-full rounded-l-lg flex flex-col items-center">
       
       {/* Avatar */}
       <div className="w-24 h-24 rounded-full bg-blue-500 flex items-center justify-center text-white text-4xl font-bold mb-4 shadow-lg">
@@ -191,7 +191,7 @@ export default function App() {
       <div className="flex justify-start items-center w-full mt-2">
       <button
         onClick={() => setViewUser(null)}
-        className="mt-8 bg-gray-700 hover:bg-gray-900 text-white py-2 px-6 rounded-md shadow"
+        className="mt-8 bg-gray-700 hover:bg-gray-900 cursor-pointer text-white py-2 px-6 rounded-md shadow"
       >
         Close
       </button>
