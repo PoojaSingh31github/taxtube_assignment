@@ -170,10 +170,10 @@ export default function App() {
       <div className="mt-6 w-full">
         <h3 className="text-md font-semibold text-gray-800 mb-2">Address</h3>
         <div className="text-sm text-gray-600">
-          <p>Street: {viewUser.address.street}</p>
-          <p>Suite: {viewUser.address.suite}</p>
-          <p>City: {viewUser.address.city}</p>
-          <p>Zip: {viewUser.address.zipcode}</p>
+          <p>Street: {viewUser?.address?.street}</p>
+          <p>Suite: {viewUser?.address?.suite}</p>
+          <p>City: {viewUser?.address?.city}</p>
+          <p>Zip: {viewUser?.address?.zipcode}</p>
         </div>
       </div>
 
@@ -181,9 +181,9 @@ export default function App() {
       <div className="mt-6 w-full">
         <h3 className="text-md font-semibold text-gray-800 mb-2">Company</h3>
         <div className="text-sm text-gray-600">
-          <p>Name: {viewUser.company.name}</p>
-          <p>BS: {viewUser.company.bs}</p>
-          <p>Catchphrase: <em>"{viewUser.company.catchPhrase}"</em></p>
+          <p>Name: {viewUser?.company?.name}</p>
+          <p>BS: {viewUser?.company?.bs}</p>
+          <p>Catchphrase: <em>"{viewUser?.company?.catchPhrase}"</em></p>
         </div>
       </div>
 
