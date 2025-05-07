@@ -2,7 +2,7 @@
 
 A React-based user management dashboard that fetches user data from a public API and allows user interaction via a sleek, modern UI inspired by transactional dashboards.
 
-## 🚀 Features
+## Features
 
 - Fetch users from: [JSONPlaceholder API](https://jsonplaceholder.typicode.com/users)
 -  Display users in a paginated table (5 users/page)
